@@ -4,6 +4,8 @@
     --color-accent: #ff3400;
     --color-headings: #1b0760;
     --color-body: #918ca4;
+    --color-border: #ccc;
+    --border-radius: 30px;
 }
 
 *, *::after, *::before {
@@ -174,8 +176,8 @@ a {
 }
 
 .search--icon {
-    width: 1.25rem;
-    height: 1.25rem;
+    width: 1.8rem;
+    height: 1.8rem;
 }
 
 /* Buttons */
@@ -231,17 +233,10 @@ a {
 }
 
 .btn--search {
-    align-items: center;
     display: flex;
     flex-direction: row;
-    font-size: .75rem;
-    font-weight: bold;
-    height: 100%;
     justify-content: center;
-    outline: 0;
-    padding: 0;
-    margin: 0;
-    width: 8.8rem;
+    align-items: center;
 }
 
 .btn--search span {
@@ -254,12 +249,6 @@ a {
     display: inline-block;
 }
 
-div {
-    background: gold;
-    padding: .4rem;
-    height: 4rem;
-}
-
 @media screen and (min-width: 1024px){
     .btn {
         font-size: 1.5rem;
@@ -267,5 +256,43 @@ div {
 
     .btn--search {
         font-size: 1.2rem;
+    }
+}
+
+/* Input */
+.input {
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-border);
+    color: var(--color-headings);
+    outline: 0;
+    padding: 1.5rem 3.5rem;
+    font-size: 2rem;
+}
+
+::placeholder {
+    color: #cdcbd7;
+}
+
+.input-group {
+    box-shadow: 0 0 30px 20px #e6ebee;
+    border: 0;
+    border-radius: var(--border-radius);
+    display: flex;
+}
+
+.input-group .input {
+    border: 0;
+    flex-grow: 1;
+    padding: 1.5rem 1rem;
+    width: 0;
+}
+
+.input-group .btn {
+    margin: 4px;
+}
+
+@media screen and (min-width: 1024px) {
+    .input {
+        font-size: 1.5rem;
     }
 }
