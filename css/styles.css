@@ -590,6 +590,10 @@ a {
     border-radius: 5px;
 }
 
+.container .callout {
+    transform: translateY(5rem);
+}
+
 .callout--primary {
     background: var(--color-primary);
     color: #fff;
@@ -880,12 +884,17 @@ a {
 /* Footer */
 .footer {
     background: #232323;
+    padding-top: 10rem;
 }
 
 .footer a {
     color: #777;
     transition: color .3s;
     font-size: 2rem;
+}
+
+.footer .list li {
+    height: auto;
 }
 
 .footer a:hover {
@@ -898,13 +907,13 @@ a {
 }
 
 .footer__section .list {
-    margin: 1rem 0;
+    margin: 0;
 }
 
 .footer__heading {
     text-transform: uppercase;
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 .footer__brand {
@@ -938,7 +947,6 @@ a {
     }
 
     .footer__brand img {
-        /* TODO: Consider refactoring this and applying it to all images */
         width: 100%;
         max-width: 230px;
     }
